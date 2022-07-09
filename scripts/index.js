@@ -17,3 +17,7 @@ function mousePressed() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
+
+function mouseWheel(event) {
+  grid.setScale(event.delta);
+}
