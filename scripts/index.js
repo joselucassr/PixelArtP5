@@ -1,7 +1,19 @@
+let grid;
+
 function setup() {
-  createCanvas(displayWidth, displayHeight)
+  createCanvas(windowWidth, windowHeight);
+  grid = new Grid(10, 10);
 }
 
 function draw() {
-  background(0)
+  background(0);
+  grid.draw();
+}
+
+function mousePressed() {
+  grid.setPanStart(mouseX, mouseY);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
